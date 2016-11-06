@@ -44,19 +44,20 @@
             server();
             */
 
-            echo "<br>";
+            echo "<hr>";
             // Visszatérési értékek
             echo "Visszatérési értékek<br>";
             function ret_teszt() {
                 // amit a "return" után írunk, azza fog a függvényünk visszatérni
-                return "Hello World!"; 
+                return "Hello World!<br>"; 
             }
             // az echo függvénnyel liíratjuk a visszatérési értékét a függvényünknek
-            // echo ret_teszt();
+            echo ret_teszt();
 
             // vagy elmenthetjük egy változóba is:
             $ezt_kaptuk_vissza = ret_teszt(); // értéket adunk a változónak
- 
+            echo $ezt_kaptuk_vissza;
+
         ?>
     </body>
 </html>
