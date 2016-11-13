@@ -6,6 +6,8 @@
     </head>
     <body>
         <?php
+            echo "<h1>Változó típusok</h1>";
+
             // BOOLEAN típusú változó
             echo "<strong>BOOLEAN típusú változó:</strong><br>";
             $true = true;       // egy boolean típusú változó felvétele
