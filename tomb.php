@@ -7,8 +7,8 @@
     <body>
         <?php
             // Tömb létrehozása
-            echo "TÖMB létrehozása<br>";
-            echo "<hr>";
+            echo "<h1>TÖMB létrehozása</h1>";
+
             echo "A tömb kiírása:<br>";
             $arr1 = array('Pisti', 'Sanyi', 'Erika');
             //var_dump($arr); // a tömb kiiratása
