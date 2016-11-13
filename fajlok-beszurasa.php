@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset=utf-8 />
-        <title>Állandók (constants) és fájlok beszúrása (include-require)</title>
+        <title>Állandók (constants) és fájlok beszúrása (include, require)</title>
     </head>
     <body>
         <?php
@@ -30,8 +30,45 @@
 
             echo "<hr>";
 
-            // Fájlok beszúrása
+            /*
+            ** Fájlok beszúrása:
+            * Mivel valószínűleg nagy projekteket
+            * fogunk készíteni, ezért célszerű
+            * több fájlban megírni a különböző részeit
+            * és ezekre hivatkozni.
+            */
+
+            /*
+            * Teljes elérési út gyorsítja a PHP működését,
+            * ha nem kell a relatív elérési utakat
+            * kiszámolni a rendszernek.
+            * Ezért célszerű teljes elérési utakat használni:
+            * include PATH.'/beszurasok/fuggvenyek.php';
+            */
             
+            
+
+            include 'beszurasok/fuggvenyek.php';
+            /*
+            * Innentől kezdve úgy működik,
+            * minta a fuggvenyek.php fájl tartalma is
+            * a része lenne ennek a fájlnak.
+            * Amennyiben pl. rossz elérést adunk meg,
+            * a PHP tovább fut, csak figyelmeztetést ad
+            */
+
+            //----------------FONTOS-------------------
+            // require 'beszurasok/fuggvenyek.php';
+            /*
+            ** Viszont, ha "require"-rel hivjuk meg a fájlt
+            ** és valamit elszúrtunk (rossz elérési út),
+            ** akkor végzetes hibát ír ki és leáll a működés.
+            */
+            //----------------FONTOS-------------------
+
+            kiiras('Hello World!'); // A beszúrás nélkül ez a függvény nem működik!
+
+
         ?>
     </body>
 </html>
