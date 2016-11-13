@@ -6,6 +6,8 @@
     </head>
     <body>
         <?php
+            echo "<h1>Függvények létrehozása, kezelése</h1>";
+
             // Függvény létrehozása
             echo "<strong>FÜGGVÉNY létrehozása:</strong><br>";
             function fuggveny() { // a függvény definiálása
