@@ -6,18 +6,20 @@
     </head>
     <body>
         <?php
+            echo "<h1>Függvények és névterek</h1>";
+
             // Függvények részletesen
       
             echo "<strong>FÜGGVÉNYEK részletesen</strong><br>";
 
             /* NÉVTÉR:
             * Az a rész a kódban,
-            * ahonnan a változó látható iletve elérhető
+            * ahonnan a változó látható, illetve elérhető.
             * Azért van szükség erre a korlátozásra,
             * mert az összes változó betöltése nagyban
-            * lassítaná a PHP kód futását
+            * lassítaná a PHP kód futását.
             * Így csak az azonos névtérben szereplő változók
-            * érhetőek el az abban szereplő függvényekben
+            * érhetőek el az abban szereplő függvényekben.
             */
 
             echo "<br>";
@@ -50,9 +52,9 @@
             // Visszatérési értékek
             echo "Visszatérési értékek<br>";
             function ret_teszt() {
-                // amit a "return" után írunk, azza fog a függvényünk visszatérni
+                // amit a "return" után írunk, azzal fog a függvényünk visszatérni
                 return "Hello World!<br>";
-                // ha a return után próbáluk meg valait futtatni az már nem fog lefutni,
+                // ha a return után próbáluk meg valamit futtatni az már nem fog lefutni,
                 // mert a return megállítja a függvény futását
             }
             // az echo függvénnyel liíratjuk a visszatérési értékét a függvényünknek
@@ -60,7 +62,7 @@
 
             // vagy elmenthetjük egy változóba is:
             $ezt_kaptuk_vissza = ret_teszt(); // értéket adunk a változónak
-            echo $ezt_kaptuk_vissza;
+            echo $ezt_kaptuk_vissza; // majd ezt a változót íratjuk ki
 
             echo "<hr>";
             // Tetszőleges számú argumentum (paraméternek vagy adatnak is hívják)
