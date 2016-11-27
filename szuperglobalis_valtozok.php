@@ -31,7 +31,7 @@
             // $_GET (query string - kérdő szöveg) globális változóval
             // Ez egy tömb, amely tartalmazza azokat az értékeket,
             // melyeket az URL-ben kapott meg az oldal
-            // var_dump($_GET);
+            var_dump($_GET);
 
             echo "<strong>A változó alkalmazása:</strong><br>";
             if (isset($_GET['nev'])) // Ezzel megvizsgáljuk, hogy létezik-e az adott változó (nev)
