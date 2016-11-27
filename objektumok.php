@@ -33,6 +33,56 @@
             // Az objektum egyik elemének kiírása
             echo "<strong>Az objektum egyik elemének kiírása:</strong><br>";
             echo $obj->var2;
+
+            echo "<hr>";
+
+            // Új PHP osztály (class) létrehozása
+            /**
+            * 1. - Adni kell neki egy nevet (ClassName)
+            * 2. - Ez az osztály lehet egy másik osztály
+            *      kiterjesztése (extends AnotherClass)
+            ** Van benne egy olyan függvény, hogy "__construct"
+            ** Akkor kerül meghívásra, amikor az osztályból
+            ** egy új példány létrejön
+            *** Az osztály olyan elemek csoportja, amelyekre
+            *** egyazon dolgok érvényesek.
+            *** Az osztályokban nem lehet minden változót kívülről elérni!
+            */
+            class Tanulo // Egyezményesen NAGY kezdőbetűvel írjuk az osztály nevét
+            {
+                // Ezek a változók kívülről is elérhetők (public)
+                public $terem = 28;
+                public $kor = 12;
+                public $nev = 'Péter';
+                // A "private" kulcsszóval csak az osztályon belülről
+                // érhető el a változó: "private $nev = 'Péter'"
+                
+                function __construct($nev)
+                {
+                    // Az osztályon belül magára az osztályra
+                    // a $this kulcsszóval tudunk hivatkozni
+                    $this->nev = $nev;
+                }
+
+                // Egy függvény létrehozása az osztályon belül
+                public function kiiras() {
+                    echo "A tanuló neve: ".$this->nev."<br>"."A tanuló életkora: ".$this->kor."<br>"."A tanuló osztálya: ".$this->terem;
+                }
+            }
+
+            // Egy új példány létrehozása az osztályból
+            echo "<strong>Egy újonnan létrehozott osztály kiírása:</strong><br>";
+            $milan = new Tanulo('Milán'); // Elmentjük egy változóba az új osztályt
+            echo $milan->nev."<br>";
+
+            // Több példány is létrehozható belőle (ez a lényeg :-))
+            $john = new Tanulo('John');
+            echo $john->nev;
+
+            echo "<hr>";
+
+            echo "<strong>Az osztályon belül létrehozott függvény kiírása:</strong><br>";
+            $milan->kiiras();
         ?>
     </body>
 </html>
