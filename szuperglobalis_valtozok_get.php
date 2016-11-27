@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset=utf-8 />
-        <title>Szuperglobális változók</title>
+        <title>Szuperglobális változók - $_GET</title>
     </head>
     <body>
 
-        <h1>Szuperglobális változók</h1>
+        <h1>Szuperglobális változók - $_GET</h1>
 
         <form>
             <input type="text" name="nev" placeholder="Név">
