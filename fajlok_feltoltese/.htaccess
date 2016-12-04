@@ -1,0 +1,4 @@
+# Különbözõ programok futtatásának letiltása a szerveren:
+Options -ExecCGI
+# A következõ fájlok futtatását tiltjuk le a szerveren:
+AddHandler cgi-script .php .pl .py .jsp .asp .htm .shtml .sh .cgi
